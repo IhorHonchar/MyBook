@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Book</string>
+
+    <string name="books">Books</string>
+    <string name="genres">Genres</string>
+    <string name="favorites">Favorites</string>
+    <string name="authors">Authors</string>
+    <string name="setting">Settings</string>
+    <string name="search">Search</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
