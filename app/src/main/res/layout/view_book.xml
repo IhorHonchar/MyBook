@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="109dp"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBookImage"
+        android:layout_width="@dimen/book_size_width"
+        android:layout_height="@dimen/book_size_height"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_books"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivStar"
+        android:layout_width="@dimen/image_size_star"
+        android:layout_height="24dp"
+        android:layout_marginTop="@dimen/book_star_margin"
+        android:layout_marginEnd="@dimen/book_star_margin"
+        android:src="@drawable/ic_star"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:background="@drawable/ic_surface"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBookImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivTime"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_access_time_white_10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivTime"
+            app:layout_constraintTop_toTopOf="@+id/ivTime"
+            tools:text="6:13:00" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivReader"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_mic_white_10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivTime" />
+
+        <TextView
+            android:id="@+id/tvReaderName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivReader"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivReader"
+            app:layout_constraintTop_toTopOf="@+id/ivReader"
+            tools:text="Ренсом Ригз" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvBookTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:minLines="2"
+        android:textColor="?attr/colorToolbarItem"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBookImage"
+        tools:text="Настоящик" />
+
+    <TextView
+        android:id="@+id/tvBookAuthor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:alpha="0.54"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:minHeight="20sp"
+        android:minLines="2"
+        android:textColor="?attr/colorToolbarItem"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBookTitle"
+        tools:text="Александр Бачило" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivProgressCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_progress_circle"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBookImage"
+        app:layout_constraintEnd_toEndOf="@+id/ivBookImage"
+        app:layout_constraintStart_toStartOf="@+id/ivBookImage"
+        app:layout_constraintTop_toTopOf="@+id/ivBookImage" />
+
+    <TextView
+        android:id="@+id/tvBookReadProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivProgressCircle"
+        app:layout_constraintEnd_toEndOf="@+id/ivProgressCircle"
+        app:layout_constraintStart_toStartOf="@+id/ivProgressCircle"
+        app:layout_constraintTop_toTopOf="@+id/ivProgressCircle"
+        tools:text="23%" />
+
+    <RelativeLayout
+        android:id="@+id/reading_now"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_progress_circle"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBookImage"
+        app:layout_constraintEnd_toEndOf="@+id/ivBookImage"
+        app:layout_constraintStart_toStartOf="@+id/ivBookImage"
+        app:layout_constraintTop_toTopOf="@+id/ivBookImage">
+
+        <TextView
+            android:id="@+id/tv_reading_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:text="@string/people"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBookSurface"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_surface_full"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBookLoadMore"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        android:theme="@style/Theme.MaterialComponents.Light"
+        app:backgroundTint="@color/accent_app_color"
+        app:cornerRadius="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/buttonText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:text="@string/load_more"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBookLoadMore"
+        app:layout_constraintEnd_toEndOf="@+id/btnBookLoadMore"
+        app:layout_constraintStart_toStartOf="@+id/btnBookLoadMore"
+        app:layout_constraintTop_toTopOf="@+id/btnBookLoadMore" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivSelectedBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_bookmark_selected" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivCheckedIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_spacing_4dp"
+        android:layout_marginTop="@dimen/default_spacing_4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_check_circle_white_24dp"
+        tools:ignore="VectorDrawableCompat" />
+</merge>

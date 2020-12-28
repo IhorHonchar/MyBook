@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BottomNavigationView.Inactive" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">@dimen/default_text_size_10sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/bottomNavItemDeselected</item>
+    </style>
+
+    <style name="BottomNavigationView.Active" parent="@style/BottomNavigationView.Inactive">
+        <item name="android:textColor">@color/bottomNavItemSelected</item>
+    </style>
+
+    <style name="Dark.Overlay.LightPopup" parent="ThemeOverlay.AppCompat.Light">
+        <item name="titleTextColor">?attr/colorToolbarItem</item>
+    </style>
+</resources>

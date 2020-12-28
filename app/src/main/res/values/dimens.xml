@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_spacing_8dp">8dp</dimen>
+    <dimen name="default_text_size_10sp">10sp</dimen>
+    <dimen name="default_spacing_0dp">0dp</dimen>
+    <dimen name="default_spacing_2dp">2dp</dimen>
+    <dimen name="book_size_width">109</dimen>
+    <dimen name="book_size_height">154</dimen>
+    <dimen name="list_item_book_width">109</dimen>
+    <dimen name="image_size_star">24</dimen>
+    <dimen name="book_star_margin">4dp</dimen>
+    <dimen name="default_spacing_4dp">4dp</dimen>
+    <dimen name="icon_size_60dp">60dp</dimen>
+    <dimen name="icon_size_40dp">40dp</dimen>
+    <dimen name="default_spacing_12dp">12dp</dimen>
+    <dimen name="default_spacing_25dp">25dp</dimen>
+    <dimen name="default_text_size_16sp">16sp</dimen>
+    <dimen name="default_spacing_10dp">10dp</dimen>
+    <dimen name="default_spacing_16dp">16dp</dimen>
+</resources>

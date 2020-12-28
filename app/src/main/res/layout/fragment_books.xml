@@ -1,26 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".views.BooksFragment">
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
-        <variable
-            name="myName"
-            type="ua.vrgsoft.honchar.mybook.repository.MyName" />
-
     </data>
 
-    <TextView
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ua.vrgsoft.honchar.mybook.view.CollectionView
+                    android:id="@+id/cvReadingBooks"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/default_spacing_8dp"
+                    app:cvButtonClickListener="@{}"
+                    app:cvButtonText="@string/show_all_label"
+                    app:cvDirection="horizontal"
+                    app:cvListAdapter="@{}"
+                    app:cvListItem="@layout/list_item_book_series_horizontal"
+                    app:cvListType="linear"
+                    app:cvTitle="@string/read_books"
+                    app:setBooksAdapterItems="@{}"
+                    app:setVisibilityBooksCategory="@{}" />
+
+                <ua.vrgsoft.honchar.mybook.view.CollectionView
+                    android:id="@+id/cvLatestBooks"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cvButtonClickListener="@{}"
+                    app:cvButtonText="@string/show_all_label"
+                    app:cvDirection="horizontal"
+                    app:cvListAdapter="@{}"
+                    app:cvListItem="@layout/list_item_book_series_horizontal"
+                    app:cvListType="linear"
+                    app:cvTitle="@string/latest"
+                    app:setBooksAdapterItems="@{}"
+                    app:setVisibilityBooksCategory="@{}" />
+
+
+                <ua.vrgsoft.honchar.mybook.view.CollectionView
+                    android:id="@+id/cvBookSeries"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ua.vrgsoft.honchar.mybook.view.CollectionView
+                    android:id="@+id/cvTopBooks"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ua.vrgsoft.honchar.mybook.view.CollectionView
+                    android:id="@+id/cvPopularBooks"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </ScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 
 </layout>

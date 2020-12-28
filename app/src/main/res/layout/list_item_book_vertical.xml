@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="@dimen/default_spacing_0dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/list_item_book_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="@dimen/default_spacing_8dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="@{}"
+            app:cardBackgroundColor="?attr/colorToolbar"
+            app:onLongClick="@{}">
+
+            <ua.vrgsoft.honchar.mybook.view.ui.books.BookView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bvAuthorName="@{}"
+                app:bvFavorite="@{}"
+                app:bvReaderName="@{}"
+                app:bvSelected="@{}"
+                app:bvStarClickListener="@{}"
+                app:bvState="normal"
+                app:bvTimeInMillis="@{}"
+                app:bvTitle="@{}"
+                app:setImage="@{}" />
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="colorToolbarItem" format="reference" />
+    <attr name="colorToolbar" format="reference" />
+
+    <declare-styleable name="CollectionView">
+        <attr name="cvTitle" format="string"/>
+        <attr name="cvButtonText" format="string"/>
+        <attr name="cvListType" format="enum">
+            <enum name="linear" value="1"/>
+            <enum name="grid" value="2"/>
+        </attr>
+        <attr name="cvDirection" format="enum">
+            <enum name="horizontal" value="1"/>
+            <enum name="vertical" value="2"/>
+        </attr>
+        <attr name="cvListItem" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="BookView">
+        <attr name="bvTitle" format="string"/>
+        <attr name="bvAuthorName" format="string"/>
+        <attr name="bvReaderName" format="string"/>
+        <attr name="bvTimeInMillis" format="integer"/>
+        <attr name="bvState" format="enum">
+            <enum name="normal" value="1"/>
+            <enum name="reading" value="2"/>
+            <enum name="blurred" value="3"/>
+        </attr>
+        <attr name="bvReadingNow" format="integer" />
+        <attr name="bvProgress" format="float"/>
+        <attr name="bvFavorite" format="boolean"/>
+        <attr name="bvSelected" format="boolean"/>
+    </declare-styleable>
+</resources>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.MainActivity">
+    tools:context=".view.ui.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbarMain"
@@ -19,6 +19,9 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:minHeight="50dp"
+
+            app:theme="@style/Dark.Overlay.LightPopup"
+            android:theme="@style/Dark.Overlay.LightPopup"
             app:contentInsetEnd="0dp"
             app:contentInsetLeft="0dp"
             app:contentInsetRight="0dp"
@@ -101,11 +104,11 @@
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="124dp"
-        tools:layout_editor_absoluteY="83dp">
-
-    </FrameLayout>
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/navigation_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbarMain"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigation_view"
@@ -116,5 +119,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:labelVisibilityMode="labeled"
+        app:itemTextColor="@drawable/selector_bottombar_text"
+        app:itemIconTint="@drawable/selector_bottombar_text"
+        app:itemTextAppearanceActive="@style/BottomNavigationView.Active"
+        app:itemTextAppearanceInactive="@style/BottomNavigationView.Inactive"
         app:menu="@menu/navigation_view_menu"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
