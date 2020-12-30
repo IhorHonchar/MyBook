@@ -25,5 +25,6 @@ interface MyBookApi {
     @GET("books/list-by-author")
     fun getBooksByAuthor(@Query("author_id") id:Int, @Query("limit") limit: Int, @Query("offset") offset: Int) : Call<Books>
 
-
+    @GET("books/popular")
+    fun getPopularBooks(@Query("limit") limit: Int, @Query("offset") offset: Int) : Call<Books>
 }

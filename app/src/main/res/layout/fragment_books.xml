@@ -23,7 +23,7 @@
                 android:orientation="vertical">
 
                 <ua.vrgsoft.honchar.mybook.view.CollectionView
-                    android:id="@+id/cvReadingBooks"
+                    android:id="@+id/cvPopularBooks"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/default_spacing_8dp"
@@ -33,7 +33,7 @@
                     app:cvListAdapter="@{}"
                     app:cvListItem="@layout/list_item_book_series_horizontal"
                     app:cvListType="linear"
-                    app:cvTitle="@string/read_books"
+                    app:cvTitle="@string/popular"
                     app:setBooksAdapterItems="@{}"
                     app:setVisibilityBooksCategory="@{}" />
 
@@ -63,7 +63,7 @@
                     android:layout_height="match_parent" />
 
                 <ua.vrgsoft.honchar.mybook.view.CollectionView
-                    android:id="@+id/cvPopularBooks"
+                    android:id="@+id/cvReadingBooks"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
             </LinearLayout>
